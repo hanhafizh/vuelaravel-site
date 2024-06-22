@@ -45,7 +45,7 @@
 <script>
 import carousel from "vue-owl-carousel";
 export default {
-  name: "WomanShayna",
+  name: "HeroShayna",
   components: {
     carousel,
   },
