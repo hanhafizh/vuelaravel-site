@@ -11,7 +11,7 @@
               /></a>
             </div>
             <ul>
-              <li>Address: Setra Duta, Bandung</li>
+              <li>Address: Setra Duta, Jakarta</li>
               <li>Phone: +628 22081996</li>
               <li>Email: hello.shayna@gmail.com</li>
             </ul>
@@ -23,7 +23,7 @@
             </div>
           </div>
         </div>
-        <div class="col-lg-3 offset-lg-1">
+        <div class="col-lg-3 offset-lg-1 text-left">
           <div class="footer-widget">
             <h5>Information</h5>
             <ul>
@@ -35,7 +35,7 @@
           </div>
         </div>
         <div class="col-lg-3">
-          <div class="footer-widget">
+          <div class="footer-widget text-left">
             <h5>My Account</h5>
             <ul>
               <li><a href="#">My Account</a></li>
