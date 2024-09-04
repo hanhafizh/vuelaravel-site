@@ -7,7 +7,9 @@
         <div class="row">
           <div class="col-lg-12">
             <div class="breadcrumb-text product-more">
-              <a href="./home.html"><i class="fa fa-home"></i> Home</a>
+              <router-link to="/">
+                <i class="fa fa-home"></i> Home
+              </router-link>
               <span>Detail</span>
             </div>
           </div>
@@ -30,6 +32,7 @@
                   <carousel
                     :dots="false"
                     :nav="false"
+                    :autoplay="true"
                     class="product-thumbs-track ps-slider"
                   >
                     <div
@@ -98,8 +101,10 @@
                     <h4>$495.00</h4>
                   </div>
                   <div class="quantity">
-                    <a href="shopping-cart.html" class="primary-btn pd-cart"
-                      >Add To Cart</a
+                    <router-link to="/cart"
+                      ><a href="shopping-cart.html" class="primary-btn pd-cart"
+                        >Add To Cart</a
+                      ></router-link
                     >
                   </div>
                 </div>
@@ -109,46 +114,49 @@
         </div>
       </div>
     </section>
+    <RelatedShayna />
     <!-- Product Shop Section End -->
     <FooterShayna />
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-// import HelloWorld from "@/components/HelloWorld.vue";
-import HeaderShayna from "@/components/HeaderShayna.vue";
-import FooterShayna from "@/components/FooterShayna.vue";
-import carousel from "vue-owl-carousel";
+  // @ is an alias to /src
+  // import HelloWorld from "@/components/HelloWorld.vue";
+  import HeaderShayna from "@/components/HeaderShayna.vue";
+  import RelatedShayna from "@/components/RelatedShayna.vue";
+  import FooterShayna from "@/components/FooterShayna.vue";
+  import carousel from "vue-owl-carousel";
 
-export default {
-  name: "ProductView",
-  components: {
-    HeaderShayna,
-    FooterShayna,
-    carousel,
-  },
-  data() {
-    return {
-      gambar_default: "img/mickey1-lama.jpg",
-      thumbs: [
-        "img/mickey1-lama.jpg",
-        "img/mickey2.jpg",
-        "img/mickey3.jpg",
-        "img/mickey4.jpg",
-      ],
-    };
-  },
-  methods: {
-    changeImage(urlImage) {
-      this.gambar_default = urlImage;
+  export default {
+    name: "ProductView",
+    components: {
+      HeaderShayna,
+      RelatedShayna,
+      FooterShayna,
+      carousel,
     },
-  },
-};
+    data() {
+      return {
+        gambar_default: "img/mickey1-lama.jpg",
+        thumbs: [
+          "img/mickey1-lama.jpg",
+          "img/mickey2.jpg",
+          "img/mickey3.jpg",
+          "img/mickey4.jpg",
+        ],
+      };
+    },
+    methods: {
+      changeImage(urlImage) {
+        this.gambar_default = urlImage;
+      },
+    },
+  };
 </script>
 
 <style scoped>
-.product-thumbs .pt {
-  margin-right: 14px;
-}
+  .product-thumbs .pt {
+    margin-right: 14px;
+  }
 </style>
