@@ -65,7 +65,7 @@
                 </div>
               </div>
               <div class="col-lg-8">
-                <h4 class="mb-4">Informasi Pembeli:</h4>
+                <h4 class="mb-4 text-left">Informasi Pembeli:</h4>
                 <div class="user-checkout text-left">
                   <form>
                     <div class="form-group">
@@ -134,7 +134,11 @@
                       Nama Penerima <span>Shayna</span>
                     </li>
                   </ul>
-                  <a href="success.html" class="proceed-btn">I ALREADY PAID</a>
+                  <router-link to="/success"
+                    ><a href="#" class="proceed-btn"
+                      >I ALREADY PAID</a
+                    ></router-link
+                  >
                 </div>
               </div>
             </div>
